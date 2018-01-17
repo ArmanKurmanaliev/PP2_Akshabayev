@@ -11,12 +11,14 @@ namespace Rectangle
         public double length;
         public double width;
         public double area;
+        public double perimetr;
 
         public Rect(double l, double w)
         {
             length = l;
             width = w;
             FindArea();
+            FindPerimetr();
         }
 
         public void FindArea()
@@ -24,9 +26,14 @@ namespace Rectangle
             area = length * width;
         }
 
+        public void FindPerimetr()
+        {
+            perimetr = length + length + width + width;
+        }
+
         public override string ToString()
         {
-            return "length = " + length + "\nwidth = " + width + "\narea = " + area;
+            return "length = " + length + "\nwidth = " + width + "\narea = " + area + "\nperimetr = " + perimetr;
         }
     }
 
