@@ -4,34 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace w35
+namespace W3G1_Example4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.CursorVisible = false;
-
             int x = 0, y = 0;
-
             while (true)
             {
                 Console.Clear();
+                Console.CursorVisible = false;
+
                 Console.SetCursorPosition(x, y);
-                Console.WriteLine("o");
+                Console.Write("o");
 
-                ConsoleKeyInfo key = Console.ReadKey();
-
-                if (key.Key == ConsoleKey.DownArrow)
-                    y++;
-                if (key.Key == ConsoleKey.UpArrow)
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+                if (keyInfo.Key == ConsoleKey.UpArrow)
                     y--;
-                if (key.Key == ConsoleKey.RightArrow)
-                    x++;
-                if (key.Key == ConsoleKey.LeftArrow)
+                if (keyInfo.Key == ConsoleKey.DownArrow)
+                    y++;
+                if (keyInfo.Key == ConsoleKey.LeftArrow)
                     x--;
-
-                Console.ReadKey();
+                if (keyInfo.Key == ConsoleKey.RightArrow)
+                    x++;
             }
         }
     }
