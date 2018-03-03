@@ -30,8 +30,6 @@ namespace lab_vol._2
         {
             return "radius = " + radius + "\narea = " + area;
         }
-
-
     }
 
     
